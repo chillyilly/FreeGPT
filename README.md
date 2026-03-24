@@ -413,17 +413,3 @@ rm -f ~/.freegpt/browser_profile/lock ~/.freegpt/browser_profile/.parentlock
 
 ### Agent repeating old responses
 The agent tracks responses by their unique `data-message-id` attribute to prevent confusing old and new messages. If issues persist, try `/new` to start a fresh conversation.
-
----
-
-## Responsible Use
-
-This tool is for **personal use with your own ChatGPT account**. It automates the same actions you'd perform manually in a browser - typing messages and reading responses. It does not bypass any paywalls or access restrictions beyond what your account allows.
-
-The agent mode executes commands on **your local machine** with **your user permissions**. Review tool calls before approving, especially `bash` commands. The safety system flags dangerous patterns but cannot catch everything.
-
----
-
-## License
-
-MIT

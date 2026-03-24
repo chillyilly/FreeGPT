@@ -317,10 +317,10 @@ freegpt/
 ### Chat Mode
 
 ```
-╔══════════════════════════════════════════════════╗
-║  FreeGPT - ChatGPT via the public website        ║
-║  No API key required                              ║
-╚══════════════════════════════════════════════════╝
+ ╔══════════════════════════════════════════════════╗
+║  FreeGPT - ChatGPT via the public website          ║
+║  No API key required                               ║
+ ╚══════════════════════════════════════════════════╝
 
 [+] Session active - logged in
   Model: ChatGPT
@@ -350,10 +350,10 @@ Closing...
 ### Agent Mode
 
 ```
-╔══════════════════════════════════════════════════╗
-║  FreeGPT Agent - AI coding assistant              ║
-║  ChatGPT + local tools (read/write/bash/search)  ║
-╚══════════════════════════════════════════════════╝
+ ╔══════════════════════════════════════════════════╗
+║  FreeGPT Agent - AI coding assistant               ║
+║  ChatGPT + local tools (read/write/bash/search)    ║
+ ╚══════════════════════════════════════════════════╝
 
   Working directory: /home/user/myproject
   Auto-approve: OFF (will prompt for writes)

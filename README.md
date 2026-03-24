@@ -1,10 +1,10 @@
 # FreeGPT
 
-**Interactive CLI for ChatGPT via the public website** — no API key required. Includes a basic chat client and an **agent mode** that gives ChatGPT Claude Code-like capabilities: reading files, writing code, running shell commands, and searching your codebase — all executed locally through an automated tool loop.
+**Interactive CLI for ChatGPT via the public website** no API key required. Includes a basic chat client and an **agent mode** that gives ChatGPT Claude Code-like capabilities: reading files, writing code, running shell commands, and searching your codebase - all executed locally through an automated tool loop.
 
 ```
 ╔══════════════════════════════════════════════════╗
-║  FreeGPT — ChatGPT via the public website        ║
+║  FreeGPT - ChatGPT via the public website        ║
 ║  No API key required                             ║
 ╚══════════════════════════════════════════════════╝
 
@@ -22,15 +22,15 @@ You > _
 
 ## Two Modes
 
-### `freegpt.py` — Chat Client
+### `freegpt.py` - Chat Client
 Simple conversational interface. Type messages, get responses. Supports multi-turn conversations, session persistence, and clipboard copy.
 
-### `freegpt_agent.py` — Coding Agent
-Gives ChatGPT the ability to interact with your local machine through 6 tools. ChatGPT decides which tools to use, this agent executes them locally and feeds results back automatically — looping until the task is complete.
+### `freegpt_agent.py` - Coding Agent
+Gives ChatGPT the ability to interact with your local machine through 6 tools. ChatGPT decides which tools to use, this agent executes them locally and feeds results back automatically - looping until the task is complete.
 
 ```
 ╔══════════════════════════════════════════════════╗
-║  FreeGPT Agent — AI coding assistant             ║
+║  FreeGPT Agent - AI coding assistant             ║
 ║  ChatGPT + local tools (read/write/bash/search)  ║
 ╚══════════════════════════════════════════════════╝
 
@@ -81,7 +81,7 @@ Both modes use **Playwright** (headless Firefox) with **anti-detection stealth p
 1. A stealth Firefox instance navigates to `chatgpt.com`
 2. On first run, a browser window opens for you to log in with your account
 3. Your session (cookies, localStorage) is saved to `~/.freegpt/browser_profile/`
-4. On subsequent runs, the saved session is reused — no login needed
+4. On subsequent runs, the saved session is reused - no login needed
 5. Messages are typed into ChatGPT's ProseMirror editor and submitted via the send button
 6. Responses are tracked by their unique `data-message-id` to avoid confusing turns
 7. A spiral animation displays while waiting for responses
@@ -90,7 +90,7 @@ Both modes use **Playwright** (headless Firefox) with **anti-detection stealth p
 
 The browser session applies anti-detection techniques to avoid triggering CAPTCHA:
 
-- `navigator.webdriver = false` — hides automation flag
+- `navigator.webdriver = false` - hides automation flag
 - Fake browser plugins (real browsers have 3+, headless has 0)
 - Spoofed WebGL vendor/renderer strings
 - Consistent locale, timezone, and color scheme
@@ -119,7 +119,7 @@ playwright install firefox
 | `playwright` | Headless browser automation |
 | `playwright-stealth` | Anti-detection patches (webdriver, plugins, WebGL, etc.) |
 
-Python 3.8+ required. No other dependencies — all tool execution uses the Python standard library.
+Python 3.8+ required. No other dependencies - all tool execution uses the Python standard library.
 
 ---
 
@@ -223,7 +223,7 @@ def connect():
 ```
 ````
 
-The agent parses these, executes locally, and sends results back to ChatGPT for the next iteration — up to 25 auto-loop iterations per task.
+The agent parses these, executes locally, and sends results back to ChatGPT for the next iteration - up to 25 auto-loop iterations per task.
 
 #### Agent Commands
 
@@ -262,7 +262,7 @@ Write operations (`bash`, `write_file`, `edit_file`) require user confirmation b
   Execute? (y/n/a=approve all): y
 ```
 
-**Dangerous command detection** — commands matching these patterns get an extra red warning:
+**Dangerous command detection** - commands matching these patterns get an extra red warning:
 
 - `rm -rf` with broad paths
 - `sudo`, `mkfs`, `dd of=/dev/`
@@ -322,7 +322,7 @@ rm -rf ~/.freegpt/browser_profile/
 
 Conversation history is saved to `~/.freegpt/history.json` on exit.
 
-Both `freegpt.py` and `freegpt_agent.py` share the same browser profile — log in once and both modes work.
+Both `freegpt.py` and `freegpt_agent.py` share the same browser profile - log in once and both modes work.
 
 ---
 
@@ -335,7 +335,7 @@ freegpt/
 └── README.md
 ```
 
-`freegpt_agent.py` imports from `freegpt.py` — the browser session, spinner, terminal helpers, and REPL utilities are shared.
+`freegpt_agent.py` imports from `freegpt.py` - the browser session, spinner, terminal helpers, and REPL utilities are shared.
 
 ---
 
@@ -345,11 +345,11 @@ freegpt/
 
 ```
 ╔══════════════════════════════════════════════════╗
-║  FreeGPT — ChatGPT via the public website        ║
+║  FreeGPT - ChatGPT via the public website        ║
 ║  No API key required                              ║
 ╚══════════════════════════════════════════════════╝
 
-[+] Session active — logged in
+[+] Session active - logged in
   Model: ChatGPT
 
   Type /help for commands. Just type to chat.
@@ -378,7 +378,7 @@ Closing...
 
 ```
 ╔══════════════════════════════════════════════════╗
-║  FreeGPT Agent — AI coding assistant              ║
+║  FreeGPT Agent - AI coding assistant              ║
 ║  ChatGPT + local tools (read/write/bash/search)  ║
 ╚══════════════════════════════════════════════════╝
 
@@ -445,7 +445,7 @@ The agent tracks responses by their unique `data-message-id` attribute to preven
 
 ## Responsible Use
 
-This tool is for **personal use with your own ChatGPT account**. It automates the same actions you'd perform manually in a browser — typing messages and reading responses. It does not bypass any paywalls or access restrictions beyond what your account allows.
+This tool is for **personal use with your own ChatGPT account**. It automates the same actions you'd perform manually in a browser - typing messages and reading responses. It does not bypass any paywalls or access restrictions beyond what your account allows.
 
 The agent mode executes commands on **your local machine** with **your user permissions**. Review tool calls before approving, especially `bash` commands. The safety system flags dangerous patterns but cannot catch everything.
 

@@ -74,33 +74,6 @@ ChatGPT:
 
 ---
 
-## How It Works
-
-Both modes use **Playwright** (headless Firefox) with **anti-detection stealth patches** to interact with the ChatGPT web interface exactly as a normal browser would.
-
-1. A stealth Firefox instance navigates to `chatgpt.com`
-2. On first run, a browser window opens for you to log in with your account
-3. Your session (cookies, localStorage) is saved to `~/.freegpt/browser_profile/`
-4. On subsequent runs, the saved session is reused - no login needed
-5. Messages are typed into ChatGPT's ProseMirror editor and submitted via the send button
-6. Responses are tracked by their unique `data-message-id` to avoid confusing turns
-7. A spiral animation displays while waiting for responses
-
-### Stealth Measures
-
-The browser session applies anti-detection techniques to avoid triggering CAPTCHA:
-
-- `navigator.webdriver = false` - hides automation flag
-- Fake browser plugins (real browsers have 3+, headless has 0)
-- Spoofed WebGL vendor/renderer strings
-- Consistent locale, timezone, and color scheme
-- Randomized viewport dimensions
-- Persistent browser profile (returning user, not a fresh bot)
-- Homepage visit before target navigation (natural browsing pattern)
-- Automatic stale lock file cleanup on launch
-
----
-
 ## Installation
 
 ```bash

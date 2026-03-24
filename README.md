@@ -1,6 +1,6 @@
 # FreeGPT
 
-**Interactive CLI for ChatGPT via the public website** no API key required. Includes a basic chat client and an **agent mode** that gives ChatGPT Claude Code-like capabilities: reading files, writing code, running shell commands, and searching your codebase - all executed locally through an automated tool loop.
+**Interactive CLI for ChatGPT via the public website**. no API key required. Includes a basic chat client and an **agent mode** that gives ChatGPT Claude Code-like capabilities: reading files, writing code, running shell commands, and searching your codebase - all executed locally through an automated tool loop.
 
 ```
 ╔══════════════════════════════════════════════════╗

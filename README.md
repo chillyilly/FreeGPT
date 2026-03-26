@@ -318,8 +318,8 @@ freegpt/
 
 ```
  ╔══════════════════════════════════════════════════╗
-║  FreeGPT - ChatGPT via the public website          ║
-║  No API key required                               ║
+ ║  FreeGPT - ChatGPT via the public website        ║
+ ║  No API key required                             ║
  ╚══════════════════════════════════════════════════╝
 
 [+] Session active - logged in
@@ -351,8 +351,8 @@ Closing...
 
 ```
  ╔══════════════════════════════════════════════════╗
-║  FreeGPT Agent - AI coding assistant               ║
-║  ChatGPT + local tools (read/write/bash/search)    ║
+ ║  FreeGPT Agent - AI coding assistant             ║
+ ║  ChatGPT + local tools (read/write/bash/search)  ║
  ╚══════════════════════════════════════════════════╝
 
   Working directory: /home/user/myproject
@@ -386,7 +386,7 @@ ChatGPT:
 
 ### "playwright not installed"
 ```bash
-pip install playwright playwright-stealth
+pip3 install playwright playwright-stealth
 playwright install firefox
 ```
 

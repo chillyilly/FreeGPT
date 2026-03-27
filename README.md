@@ -81,7 +81,7 @@ git clone https://github.com/chillyilly/freegpt.git
 cd freegpt
 
 # Install dependencies
-pip install playwright playwright-stealth
+pip3 install playwright playwright-stealth
 playwright install firefox
 ```
 

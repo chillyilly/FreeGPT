@@ -226,7 +226,7 @@ The agent parses these, executes locally, and sends results back to ChatGPT for 
 Write operations (`bash`, `write_file`, `edit_file`) require user confirmation before execution:
 
 ```
-  🔧 tool:edit_file
+   tool:edit_file
   │ path: src/config.py
   │ ---old
   │ DEBUG = True
@@ -360,14 +360,14 @@ Closing...
 
 You > find all python files and list any that import requests
 
-  🔍 tool:glob
+   tool:glob
   │ **/*.py
   │ /home/user/myproject/src/api.py
   │ /home/user/myproject/src/scraper.py
   │ /home/user/myproject/tests/test_api.py
   └─ done
 
-  🔎 tool:grep
+   tool:grep
   │ pattern: import requests
   │ path: /home/user/myproject
   │ /home/user/myproject/src/api.py:3:import requests

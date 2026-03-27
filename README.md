@@ -92,7 +92,7 @@ playwright install firefox
 | `playwright` | Headless browser automation |
 | `playwright-stealth` | Anti-detection patches (webdriver, plugins, WebGL, etc.) |
 
-Python 3.8+ required. No other dependencies - all tool execution uses the Python standard library.
+Python 3.8+ required.
 
 ---
 
